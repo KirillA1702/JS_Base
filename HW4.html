@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		'use strict';
+
+        let mode = 'normal';
+        /*корректное значение*/
+
+        let myValue = 102;
+        /*корректное значение*/
+
+        let 3myValue = '102';
+        /*некорректное значение, так как переменная не должна начинаться с цифры*/
+
+        let __hello__ = 'world';
+        /*корректное значение*/
+
+        let $$$ = 'money';
+        /*корректное значение*/
+
+        let !0_world = true;
+        /*некорректное значение, так как переменная не должна начинаться со спецсимвола*/
+
+	</script>
+</body>
+</html>
