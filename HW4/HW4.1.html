@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict'
+
+		function setNumber(num) {
+    		if (!Number(num)) {
+    			return console.log(setNumber(parseInt(prompt('Вы ввели не число! Попробуйте еще раз. Число должно быть в диапазоне 0 до 999:'))))
+    		};
+
+    		if (num < 0 || num > 999) {
+        	return console.log(setNumber(parseInt(prompt('Попробуйте еще раз. Число должно быть в диапазоне 0 до 999:'))))
+    		};
+
+	    	return {
+	        	units: num % 10,
+	        	tens: Math.floor(num / 10) % 10,
+	        	hundreds: Math.floor(num / 100)
+	    	};
+		}
+
+		console.log(setNumber(parseInt(+prompt('Введите число от 0 до 999:'))));
+	</script>
+</body>
+</html>
