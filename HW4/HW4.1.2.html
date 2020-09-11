@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict'
+
+		/*
+		function Post(author, text, date) {
+		    this.author = author;
+		    this.text = text;
+		    this.date = date;
+		}
+
+		Post.prototype.edit = function (text) {
+		    this.text = text;
+		};
+
+		function AttachedPost(author, text, date) {
+		    Post.call(this, author, text, date);
+		    this.highlighted = false;
+		}
+
+		AttachedPost.prototype = Object.create(Post.prototype);
+		AttachedPost.prototype.constructor = AttachedPost;
+		AttachedPost.prototype.makeTextHighlighted = function () {
+		    this.highlighted = true;
+		};
+
+		const post1 = new Post('Никита', 'Текст', new Date());
+		post1.edit('Здесь есть текст!');
+
+		const attachedPost1 = new AttachedPost('Кирилл', 'Новый текст', new Date());
+		attachedPost1.makeTextHighlighted();
+		attachedPost1.edit('Новый текст тут!');
+		
+		console.log(post1, attachedPost1);
+		*/
+
+		class PostClass {
+		    constructor(author, text, date) {
+		        this.author = author;
+		        this.text = text;
+		        this.date = date;
+		    }
+
+		    edit(text) {
+		        this.text = text;
+		    }
+		}
+
+		class AttachedPostClass extends PostClass {
+		    constructor(author, text, date) {
+		        super(author, text, date);
+		        this.highlighted = false;
+		    }
+
+		    makeTextHighlighted() {
+		        this.highlighted = true;
+		    }
+		}
+
+		const postClass1 = new PostClass('Кирилл', 'Новый текст', new Date());
+		postClass1.edit('Новый текст тут!');
+
+		const attachedPostClass1 = new AttachedPostClass('Никита', 'Текст', new Date());
+		attachedPostClass1.makeTextHighlighted();
+		attachedPostClass1.edit('Здесь есть текст!');
+		
+		console.log(postClass1, attachedPostClass1);
+
+	</script>
+</body>
+</html>
