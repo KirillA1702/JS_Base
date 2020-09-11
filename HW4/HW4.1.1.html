@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict'
+		/*
+		function Products(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        Products.prototype.makeDiscount = function () {
+            this.price = this.price - (this.price / 100 * +prompt('Размер скидки:'));
+        };
+
+        const product1 = new Products(prompt('Назавание товара:'), +prompt('Цена товара:'))
+        product1.makeDiscount();
+
+        console.log(product1);
+        */
+
+		class ProductsClass {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            makeDiscount() {
+                this.price = this.price - (this.price / 100 * +prompt('Размер скидки:'));
+            }
+        }
+
+        const product1 = new ProductsClass(prompt('Назавание товара:'), +prompt('Цена товара:'));
+        product1.makeDiscount();
+
+        console.log(product1);
+
+	</script>
+</body>
+</html>	
